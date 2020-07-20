@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Waste Erased</title>
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+      
+<!-- The donation -->
+<div id="donation" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+   <div class="row">
+    <div class="col-md-6 mt-2 ">
+      <h1  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;margin-bottom:1rem;">DONATE</h1>
+      <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+    <form>
+      <div class="form-row">
+       <div class="col">
+        <input type="text" class="form-control" placeholder="First name">
+       </div>
+       <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+       </div>
+       </div>
+    </form>
+     <form>
+      <div class="form-row mt-2">
+       <div class="col">
+        <input type="text" class="form-control" placeholder="Email">
+       </div>
+       <div class="col">
+      <input type="text" class="form-control" placeholder="Phone Number">
+       </div>
+       </div>
+    </form>
+       <div class="form-group mt-2">
+        <label for="exampleFormControlSelect1"><b  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;">Select amount</b></label>
+         <select class="form-control" id="exampleFormControlSelect1">
+          <option>$10</option>
+          <option>$20</option>
+          <option>$50</option>
+          <option>$75</option>
+          <option>$100</option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label for="exampleFormControlTextarea1"  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;">Message</label>
+         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+       </div>  
+       <button class="btn btn-rounded btn-primary"id="myBtn2">SUBMIT DONATION</button>
+    </div>
+     <div class="col-md-6 mt-2">
+       <h1 style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;"> WHY </h1>
+       <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+       <p style="font-family: 'Lato', sans-serif;font-size:1.2rem;text-shadow: 1px 1px 2px #000000;">To survive and prosper, we need an healthy environment. Rotting garbage produces harmful gases which people could breathe in. Even the vegetation around landfills does not do well when exposed to garbage. Proper waste management takes care of all of these problems and ensures that waste is not exposed to the air and water sources that can be contaminated. An incredible benefit of waste management is it can cut overall production costs in the long run. Recycling helps to conserve natural resources such as glass, plastic, paper and oil. Reusing these materials will place less strain on our natural resources and lower the cost of production. Be part of the change, the future, and lets erase waste.
+</p>
+  
+     </div>
+    </div>
+  </div>
+</div>
+
+
+  
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <b><a class="navbar-brand" href="index.html"><img src="/static/img/logo.png"style=" height:6rem;width:5rem;">WASTE ERASED</a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Our Mission <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#news">Latest News</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Learn More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"style="background-color:#EDAA00 ;">
+          <a class="dropdown-item" href="problem.html" >Problems</a>
+          <a class="dropdown-item" href="fix.html">Solutions</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ways To Help
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#EDAA00;">
+          <a class="dropdown-item" onclick="openNav()" href="#">Donate</a>
+          <a class="dropdown-item" href="fix.html">Meetups</a>
+          <a class="dropdown-item" href="fix.html">Volunteer</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+  </form>
+</nav>
+     
+    <div class="home2 container-fuild">
+     <div class="row" id="ad">
+       <div class="col-lg-12 text-center pt-3">
+           <span class="donate1" onclick="openNav()"><h1>DONATE<img src="/static/img/make-a-donation.svg"style="height:2rem;margin-bottom:0.7rem;"></h1></span>
+       </div>
+     </div>
+     <div class="row">
+        <div class="opening col-lg-12 pl-5">
+          <h1>PROBLEM<br>WITH OUR WASTE</h1>
+        </div>
+     </div>
+    </div>
+
+    <div class="info2 container-fuild">
+     <div class="row">
+        <div class="col-md-6 pt-5 pl-5 pr-5 pb-5">
+           <hr style="height:0.1rem;background-color:#EDAA00;width:50%" align="left">
+          <h3 class="h3tag">THERE WERE OVER 270 MILLION TONNES OF GLOBAL PLASTIC WASTE.
+          </h3>
+          <p class="ptag">
+            The waste humans generate waste has been detrimental to our environment for quite some time now. Humans are generating too much trash and cannot deal with it in a sustainable way. Waste that is not biodegradable and cannot be properly be recycled is filling our oceans and landfills. Let’s take plastic waste as an example. A recent study found that of the 6.3 billion metric tons of plastic waste that has been produced, only 9% of that plastic waste had been recycled. 
+         </p>
+        </div>
+        <div class="col-md-6 text-center" style="padding-top:3rem;">
+          <img src="https://blush.ly/LeSmlBRvP/p" style=" height:19rem;width:25rem;padding-bottom:2rem;">
+        </div>
+       
+     </div>
+    </div>
+    <br>
+       
+    
+  <div class="effects container-fuild pb-5">
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/1CSm4GG2VrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Taken out to instead put a youtube video -->
+    <!-- <div class="row">
+        <div class="col-md-6 pl-5 pt-5 pr-5 pb-5">
+          <h3 class="h3tag3">EFFECTS</h3>
+          <hr style="background-color:#024469;height:0.1rem;width:40%;margin-top:4rem;" align="left">
+          <p class="ptag2">
+            People around the world are unaware of the problems of certain items we use everyday. By not acting fast and not taking the right precautions and protections, we face creating irreversible damage and the end of many important food sources in the world. Plastic is everywhere: Soda Cans, Water Bottles, Straws, and Bags. For years now we have been told and aware that recycling is the best way of getting rid of waste in the best way possible and still 90% of global plastic is not being recycled. Oceans like the Antarctic ocean supports many sea creatures such as- Penguins, Whales, Fishes, and Seals.
+
+         </p>
+        </div>
+        <div class="col-md-6 text-center" style="padding-top:3rem;">
+          <img src="https://media.giphy.com/media/apSIOgMkOEuxG/giphy.gif" style=" height:20rem;width:25rem;">
+        </div>
+       
+     </div> -->
+    </div>
+    
+    <div class="pop container-fuild pb-5">
+      <div class="row text-center">
+         <div class="col-lg-12">
+        <h3 class="h3tag4 mt-5">EFFECTS ON ORGANISMS<h3>
+          <hr style="width:40%;height:0.1rem;background-color:#EDAA00 ;">
+         </div>
+      </div>
+      
+       <div class="row text-center mt-5">
+          <div class="col-md-4">
+             <h3 style="color:white;">Birds <h3>
+            <img src="/static/img/bird.png" style="height:10rem;">
+            <hr style="background-color:white;height:0.1rem;width:40%;" align="center">
+            <!-- <h3 style="color:white;">Population before 1950s - 10m Population after 1950s - 1m<h3> -->
+            <p class="ptag text-left" style="margin-left:2rem;margin-right:2rem;">When birds feed on the sites they are already drifting away from their natural diet. By eating landfill waste they inevitably ingest plastic, aluminum, drywall and other common materials—many of which can be deadly.
+</p>
+          </div>
+
+            <div class="col-md-4">
+             <h3 style="color:white;"> Humans <h3>
+            <img src="/static/img/person.png" style="height:10rem;">
+            <hr style="background-color:white;height:0.1rem;width:40%;" align="center">
+            <!-- <h3 style="color:white;">Population before 1950s - 1m Population after 1950s - 600k
+            <h3> -->
+            <p class="ptag text-left" style="margin-left:2rem;margin-right:2rem;">Exposure to hazardous waste can affect human health, children being more vulnerable to these pollutants. In fact, direct exposure can lead to diseases through chemical exposure as the release of chemical waste into the environment leads to chemical poisoning.  
+</p>
+          </div>
+
+            <div class="col-md-4">
+             <h3 style="color:white;">Earth<h3>
+            <img src="https://image.flaticon.com/icons/svg/1890/1890107.svg"style=" height:10rem;">
+            <hr style="background-color:white;height:0.1rem;width:40%;" align="center">
+            <!-- <h3 style="color:white;">Population before 1950s - 2m Population after 1950s - 13k -->
+<h3>
+            <p class="ptag text-left" style="margin-left:2rem;margin-right:2rem;">Disposing of waste has huge environmental impacts and can cause serious problems. Some waste will eventually rot, but not all, and in the process it may smell, or generate methane gas, which is explosive and contributes to the greenhouse effect. Leachate produced as waste decomposes may cause pollution. 
+</p>
+          </div>  
+       </div>
+    </div>
+  
+
+
+   
+  <div class="howtohelp container-fuild pb-4">
+    <div class="row">
+        <div class="col-md-12 text-center" id="help4">
+          <a href="fix.html"><button>CLICK TO HELP</button></a>
+        </div>
+    
+     </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer style="background-color:#04927af5;padding-bottom:2rem;">
+  <div class="foot container">
+    <div class="row">
+      <div class="col-md-6">
+        <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+        <h3>FOLLOW US</h3>
+        <img src="/static/img/twitter.svg" style="height:2rem;">
+        <img src="/static/img/facebook.svg" style="height:2rem;">
+        <img src="/static/img/vimeo.svg" style="height:2rem;">
+        <img src="/static/img/google-plus.svg" style="height:2.8rem;">
+      </div>
+        <div class="col-md-6" style="margin-top:1.8rem;">
+        <h3>KEEP UP WITH US</h3>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Your email address">
+          <div class="input-group-append">
+            <button type="submit" class="btn2 btn-primary" id="myBtn" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
+            
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle" style="color:#024469;font-size: 1.2rem; font-family: 'Lato', sans-serif;float:left;">Thank You For Joining Our Email List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="color:#024469;font-family: 'Lato', sans-serif;float:left">Please Check Your Email To Verify Email List</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Check Email</button>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+
+    <div class="row" style="margin-top:5rem;">
+      <div class="col-md-3">
+        <h4>CONTACT<h4>
+              <h5 class="mt-3">Waste Erased<br>
+              Po Box 1000<br>
+              New York, New York.<br> United States<br></h5>
+              <h5>questions@wasteerased.com<br> 
+              (987) 102-0945</h5>
+        
+      </div>
+      <div class="col-md-3">
+        <h4>HELP<h4>
+            <a href="#">
+              <h5 class="mt-3">Donate</h5>
+            </a>
+            <a href="fix.html">
+              <h5 class="mt-3">Volunteer</h5>
+            </a>
+           
+      </div>
+      <div class="col-md-3">
+        <h4> AWARENESS <h4>
+            <a href="problem.html">
+              <h5 class="mt-3">Concerns</h5>
+            </a>
+            <a href="fix.html">
+              <h5 class="mt-3">Solutions</h5>
+            </a>
+            <a href="#news">
+              <h5 class="mt-3">News</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">Subscribe</h5>
+            </a>
+            <a href="#info">
+              <h5 class="mt-3">Our Mission</h5>
+            </a>
+      </div>
+    <div class="col-md-3">
+        <h4>SPONSORS<h4>
+            <a href="">
+              <h5 class="mt-3">CISCO</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">Johnson&Johnson</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">BALSAMIQ</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">CLOUDSPLOIT</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">BUGSEE</h5>
+            </a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+  <!-- donation popup content -->
+<div id="myModal2" class="modal2">
+
+  <div class="modal-content2">
+    <span class="close2">&times;</span>
+     <h3 class="h3tag3">THANK YOU, FOR YOUR DONATION</h3>
+    <hr style="margin-top:5rem;height:1rem;">
+       <h3 class="text-left">Your donation will be used to protects wild rivers, restore damaged rivers and the wildlife they support, and conserve clean water for people and nature.</h3>
+       <a href="index.html"><button type="submit" class="btn2 btn-primary" id="myBtn" style="font-size:1.5rem;">CONTINUE</button></a>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+  
+
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,794 @@
+
+.carousel-item{
+  color:  #024469;
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+  padding-left:10rem;
+   padding-right:10rem
+}
+
+.carousel-control-prev{
+  position: relative;
+  left: 0;
+  transition: top ease 3s;
+} 
+
+.carousel-control-prev:hover{
+ left: -10px;
+}
+
+
+.carousel-control-next{
+  position: relative;
+  right: 0;
+  transition: top ease 3s;
+} 
+
+.carousel-control-next:hover{
+ right: -10px;
+}
+
+
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.nav{
+  top:0;
+  left:0;
+  width:100%;
+  box-sizing:border-box;
+  transition:.5s;
+}
+
+#navbar{
+    transition: top 0.4s;
+
+}
+.btn1{
+  float:left;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  color:#003755;
+  text-transform: uppercase;
+  font-weight: blod;
+  font-size: 1rem; 
+  border: none;
+  padding-top:1rem;
+  padding-right:1rem;
+  padding-left:1rem;
+  border-radius: 200px;
+
+}
+
+.navbar-brand{
+  border-right: 1px solid #003755;
+  padding-right:1rem;
+}
+.navbar-nav{
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: blod;
+  font-size: 1rem;
+  border: none;
+  padding-right:1rem;
+  padding-left:1rem;
+}
+
+.nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.dropdown-menu a{
+  color:white;
+  padding: 10px 0 0 0;
+
+}
+
+.home{
+    /* margin-top:1rem;  */
+    
+    background: url('https://sfpublicworks.org/sites/default/files/IMG_3960.JPG') no-repeat center center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -moz-box-shadow:    inset  10px -10px 300px 100px #003755;
+    -webkit-box-shadow: inset  10px -10px 300px 100px #003755;
+     box-shadow:        inset  10px -10px 300px 100px #003755;
+     padding-bottom:13rem;
+           
+}
+ 
+#ad{
+  background-color:#04927af5;
+  /* green color  */
+  
+  height:5rem;
+  color:white;
+  font-family: 'Lato', sans-serif;
+}
+
+@media screen and (max-width: 830px) {
+  #ad {
+    display:none;
+  }
+
+  /* .opening h1{
+   font-size: small;
+   
+  } */
+
+  .info svg{
+     display:none;
+  }
+
+  .h3tag{
+    margin-top:7rem;
+  }
+
+  #donation{
+     display:none;
+  }
+
+ 
+}
+
+
+@media screen and (max-width: 400px) {
+  
+  .ptag{
+    padding-bottom:1rem;
+  }
+
+ 
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  
+  .help{
+    display:none;
+  }
+
+ 
+}
+
+@media screen and (max-width: 800px) {
+  
+  .info svg{
+     display:none;
+  }
+
+ 
+}
+
+.opening h1{
+  font-family: 'Lato', sans-serif;
+  color:white;
+  font-size:5rem;
+  margin-top:12rem;
+  text-shadow: 1px 1px black;
+}
+
+.info{
+  background-color:#04927af5;
+  /* green color */
+   -moz-box-shadow:    inset  10px -10px 300px 100px #04927af5;
+   -webkit-box-shadow: inset  10px -10px 300px 100px #04927af5;
+   box-shadow:  inset  10px -10px 300px 100px #04927af5;
+  padding-bottom:10rem;
+}
+
+.ptag{
+  color:white;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  float:left;
+}
+
+.h3tag{
+  color: lightblue;
+  font-size:3rem;
+  font-family: 'Lato', sans-serif;
+  float:left;
+}
+
+.gif{
+    display: inline-block;
+    vertical-align: middle;
+    width: 95%;
+    height: 100%;
+ 
+}
+
+.h1tag2{
+  font-family: 'Lato', sans-serif;
+  color:#01cbe1;
+  font-size:3rem;
+}
+
+/* problem */
+
+
+.left{
+   height:100vh;
+   color:white;
+   box-shadow: 0 200px 300px 0 rgba(0, 0, 0, 0.2), 0 200p 
+   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://inteng-storage.s3.amazonaws.com/img/iea/yrwQlng6NK/sizes/environment_resize_md.jpg');
+    background-size:cover;
+    width:50%;
+    font-family: 'Lato', sans-serif;
+    font-size:1.2rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* https://lh3.googleusercontent.com/proxy/4AlJBUVcKXN9ZuOoVOtGvhY8ZY1eoY-djL3f57FXie8gtp80byYjGp6xx_uyBgByE2IOkIAuWagcIcvYJP8IjYLg5tyh86B4nzer2APeAzHq_pHdu6ABkDarss9CMRQofe88vSRUK1XHOnoMW-ShUY1n4HImi2Uq */
+
+
+/* https://www.biocycle.net/wp-content/uploads/2018/08/14a.jpg */
+.right{
+   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://www.biocycle.net/wp-content/uploads/2018/08/14a.jpg');
+   height:100vh;
+   color:white;
+   box-shadow: 0 200px 300px 0 rgba(0, 0, 0, 0.2), 0 200px 10px 0 rgba(0, 0, 0, 0.19);
+   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+   background-size:cover;
+   width: 50%;
+   font-family: 'Lato', sans-serif;
+   font-size:1.2rem;
+   text-shadow: 2px 2px 4px #000000;
+
+}
+
+
+
+.btn{
+  /* font-size:1.0rem !important; */
+  background-color:#EDAA00 !important;
+  color:white !important;
+  border-color: #EDAA00!important;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  float:center;
+  transform: uppercase;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  /* border-radius: 0px !important; */
+    border-radius: 200px;
+
+}
+
+.btn:hover{
+   opacity: 0.9;
+}
+
+
+/* news */ 
+.h3tag2{
+  padding-top:5rem;
+  text-shadow: rgba(0,0,0,.5) 0 1px 1px;
+  font-family: 'Lato', sans-serif;
+}
+
+.newslink{
+  color: #fff;
+  text-shadow: rgba(0,0,0,.5) 0 1px 1px;
+  font-size:2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.newslink:hover{
+   text-decoration: underline;
+   color:white;
+}
+
+
+.newslink img:hover{
+  transform: rotate(45deg);
+}
+
+.newsbackground1{
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) );
+  border-radius:10px;color:white;background-size:cover;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.newsbackground2{
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) );
+  border-radius:10px;color:white;background-size:cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.newsbackground3{
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) );
+  border-radius:10px;color:white;background-size:cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* news hover effects*/ 
+.newsbackground1:hover{
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) );
+  border-radius:10px;color:white;background-size:cover;
+}
+
+.newsbackground2:hover{
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) );
+  border-radius:10px;color:white;background-size:cover;
+}
+
+.newsbackground3:hover{
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) );
+  border-radius:10px;color:white;background-size:cover;
+}
+
+
+/* TEAM*/ 
+.team{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team h1{
+  font-size:4rem;
+  color:#ffffff;
+  margin-top:4rem;
+   font-family: 'Lato', sans-serif;
+}
+
+
+.team2 img:hover{
+      opacity: 0.7;
+}
+
+.team2 img{
+  cursor: pointer;
+}
+
+
+/* footer*/ 
+footer{
+  color:white;
+  font-family: 'Lato', sans-serif;
+  padding-top:3rem;
+}
+/* Phincho: tried to change the button's color */
+.btn2{
+  background-color:#EDAA00 !important;
+  padding-left:2rem;
+  padding-right:2rem;
+  border-color: #EDAA00!important;
+  border-radius: 200px;
+
+}
+
+.btn2:hover{
+  opacity: 0.8;
+}
+
+footer a{
+  color:white;
+}
+
+footer a:hover{
+  color:white;
+  text-decoration: underline;
+}
+
+footer img:hover{
+      opacity: 0.7;
+}
+
+footer img{
+  cursor: pointer;
+}
+
+
+/* DONATION */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg, #003755 50%, #04927af5  50%);
+  overflow-x: hidden; 
+  transition: 0.5s; 
+  color:white;
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 20%; 
+  width: 100%; 
+}
+
+
+.overlay .closebtn {
+  position: absolute;
+  top: 60px;
+  right: 45px;
+  font-size: 60px;
+  color:white;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.donate1{
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+/* probelms */
+.home2{
+     /* margin-top:5rem; */
+    background: url(https://cdn2.lamag.com/wp-content/uploads/sites/6/2018/09/GettyImages-146514302.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* -moz-box-shadow:    inset  10px -10px 300px 100px #003755;
+    -webkit-box-shadow: inset  10px -10px 300px 100px #003755;
+     box-shadow:        inset  10px -10px 300px 100px #003755;
+     padding-bottom:15rem; */
+}
+
+
+.info2{
+  background-color:#04927af5;
+   /* -moz-box-shadow:    inset  10px -10px 300px 100px #04927af5;
+   -webkit-box-shadow: inset  10px -10px 300px 100px #04927af5;
+   box-shadow:  inset  10px -10px 300px 100px #04927af5; */
+  
+}
+
+/* problem effects */
+
+.effects{
+  background-color: white;\
+}
+
+
+.h3tag3{
+  color: #024469;
+  font-size:3rem;
+  font-family: 'Lato', sans-serif;
+  float:left;
+}
+
+
+.ptag2{
+  color:  #024469;
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+  float:left;
+}
+
+.pop{
+
+  background-color:#04927af5;
+   -moz-box-shadow:    inset  10px -10px 300px 100px #003755;
+   -webkit-box-shadow: inset  10px -10px 300px 100px #003755;
+   box-shadow:  inset  10px -10px 300px 100px #003755;
+}
+
+
+.h3tag4{
+  color:#EDAA00;
+  font-size:3rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.pop img:hover{
+
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+          
+}
+
+
+/* problem how to help sec */
+
+.howtohelp{
+  background-color: white;
+  padding-top:2rem;
+  color:#003755 
+}
+
+#help4 button{
+      text-decoration: none;
+      color:#024469;
+      border-color: #024469;
+      background-color:white;
+      padding-left:1rem;
+      padding-right:1rem;
+      padding-top:0.5rem;
+      padding-bottom:0.5rem;
+      font-size:2rem;
+      border-width: 0.1rem;
+      transition:  0.5s;
+}
+
+
+#help4 button:hover{
+      text-decoration: none;
+      color:white;
+      border-color: #024469;
+      background-color:#024469;
+      padding-left:1rem;
+      padding-right:1rem;
+      padding-top:0.5rem;
+      padding-bottom:0.5rem;
+      font-size:2rem;
+      border-width: 0.1rem;
+}
+
+
+/* donation button */
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content2 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* The fixed page Button */
+.home3{
+     height:90vh;
+     /* margin-top:5rem; */
+    background: url(https://littlesproutslearning.co/wp-content/uploads/2018/07/compost-for-kids-4.jpg) no-repeat center center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -moz-box-shadow:    inset  10px -10px 300px 10px #003755;
+    -webkit-box-shadow: inset  10px -10px 300px 10px #003755;
+     box-shadow:        inset  10px -10px 300px 10px #003755;
+}
+
+#myDIV img{
+  cursor:pointer;
+}
+
+#myDIV{
+  color: #024469;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ignore this */
+.bot{
+  width: 185px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    object-fit: contain;
+    border-radius: 200px;
+    background-color: #000000;
+    border: 1px solid white;
+    color: white;
+   position:fixed;
+  bottom:0;
+  left:0;
+  width:10%;
+  height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+
+
+    /* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #EDAA00;
+  color: white;
+  padding: 16px 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 15%;
+  height:90px;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 200px;
+
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  color: black;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+/* this is where i changed the color of the ai box to black from white */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  /* min-height: 200px; */
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .botbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 1.0;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #EDAA00;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.h3tag2{
+  color: white;
+  /* background-color: white; */
+    font-weight: bold;
+}
+
+.h3tag2 {
+  
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+/* text bubble test */
+/* p.speech {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  border: 8px solid #666;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+} */
+
+
+/* .bubble{
+    position:relative;
+   padding: 10px;
+   background: #AAAAFF;
+} */
+
+.bubble:after{
+   position:absolute;
+   content: ""; 
+   top:15px;right:-10px;
+   border-width: 10px 0 10px 15px;
+   border-color: transparent  #AAAAFF;
+   border-style: solid;
+ }

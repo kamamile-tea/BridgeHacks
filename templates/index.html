@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Waste Erased</title>
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- The donation -->
+<div id="donation" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+   <div class="row">
+    <div class="col-md-6 mt-2 ">
+      <h1  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;margin-bottom:1rem;">DONATE</h1>
+      <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+    <form method="post" action="/index">
+      <div class="form-row">
+       <div class="col">
+        <input type="text" name='firstName' class="form-control" placeholder="First Name">
+       </div>
+       <div class="col">
+      <input type="text" name='lastName' class="form-control" placeholder="Last Name">
+       </div>
+       </div>
+    </form>
+     <form>
+      <div class="form-row mt-2">
+       <div class="col">
+        <input type="text" name='email' class="form-control" placeholder="Email">
+       </div>
+       <div class="col">
+      <input type="text" name='phone' class="form-control" placeholder="Phone Number">
+       </div>
+       </div>
+    </form>
+       <div class="form-group mt-2">
+        <label for="exampleFormControlSelect1"><b  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;">Select amount</b></label>
+         <select class="form-control" id="exampleFormControlSelect1">
+          <option>$10</option>
+          <option>$20</option>
+          <option>$50</option>
+          <option>$75</option>
+          <option>$100</option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label for="exampleFormControlTextarea1"  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;">Comments & Concerns</label>
+         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+       </div>  
+       <button class="btn btn-rounded btn-primary" id="myBtn2" >DONATE</button>
+    </div>
+     <div class="col-md-6 mt-2">
+       <h1 style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;"> WHY </h1>
+       <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+       <p style="font-family: 'Lato', sans-serif;font-size:1.2rem;text-shadow: 1px 1px 2px #000000;">To survive and prosper, we need an healthy environment. Rotting garbage produces harmful gases which people could breathe in. Even the vegetation around landfills does not do well when exposed to garbage. Proper waste management takes care of all of these problems and ensures that waste is not exposed to the air and water sources that can be contaminated. An incredible benefit of waste management is it can cut overall production costs in the long run. Recycling helps to conserve natural resources such as glass, plastic, paper and oil. Reusing these materials will place less strain on our natural resources and lower the cost of production. Be part of the change, the future, and lets erase waste.
+</p>
+
+  
+  
+     </div>
+    </div>
+  </div>
+</div>
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <b><a class="navbar-brand" href="index.html"><img src="/static/img/logo.png"style=" height:6rem;width:5rem;">WASTE ERASED</a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Our Mission <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#news">Latest News</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Learn More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"style="background-color:#EDAA00 ;">
+          <a class="dropdown-item" href="problem.html" >Problems</a>
+          <a class="dropdown-item" href="fix.html">Solutions</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ways To Help
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#EDAA00;">
+          <a class="dropdown-item" onclick="openNav()" href="#">Donate</a>
+          <a class="dropdown-item" href="fix.html">Meetups</a>
+          <a class="dropdown-item" href="fix.html">Volunteer</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+  </form>
+</nav>
+     
+
+    <div class="home container-fuild">
+     <div class="row" id="ad">
+       <div class="col-lg-12 text-center pt-3">
+           <span class="donate1" onclick="openNav()"><h1>DONATE<img src="/static/img/make-a-donation.svg"style="height:2rem;margin-bottom:0.7rem;"></h1></span>
+       </div>
+     </div>
+     <div class="row">
+        <div class="opening col-lg-12 pl-5">
+          <h1 style="font-weight: 900;">Be Part Of The Solution<br>Not The Pollution</h1>
+        </div>
+     </div>
+    </div>
+ 
+    
+    <div class="info container-fuild" id="about">
+     <div class="row" style="right:0">
+        <div class="col-md-6 pt-5 pl-5 pr-5">
+           <hr style="height:0.1rem;background-color:#EDAA00;width:50%" align="left">
+          <h3 class="h3tag">OUR MISSION</h3>
+          <p class="ptag">
+Our mission is to keep our environment as clean as possible by creating solutions to current pollution issues and spreading awareness of environmental issues. We hope to create healthy, rich and biodiverse oceans for future generations to enjoy. 
+Our company focuses on saving the environment and to make sure that it is back to how it was years ago but we can’t do it if not everyone is involved and helping out. There are many things that we can do and there are many things that makes us all different but one of the many things that unites us is our community, our world and our environment. Let’s work together to make sure that we protect what is ours.
+
+</p>
+        
+        </div>
+        <div class=" col-md-6 text-center" style="padding-top:5rem;">
+          <img src="https://blush.ly/JJ_DweMzQ/p" style=" height:25rem;width:15rem;padding-bottom:2rem;">
+       </div>
+     </div>
+    </div>
+
+
+ <section class="problem container-fuild">
+  <div class="row text-center">
+    <div class="left col-md-6">
+      <h1 style="margin-top:10rem;text-shadow: rgba(0,0,0,.5) 0 1px 1px;"> Concerns</h1>
+      <p style="text-align:justify;margin-left:1rem;margin-right:1rem;"> Disposing of waste has huge environmental impacts and can cause serious problems. Some waste will eventually rot, but not all, and in the process it may smell, or generate methane gas, which is explosive and contributes to the greenhouse effect. Leachate produced as waste decomposes may cause pollution. Incinerating waste also causes problems, because plastics tend to produce toxic substances, such as dioxins, when they are burnt. Gases from incineration may cause air pollution and contribute to acid rain, while the ash from incinerators may contain heavy metals and other toxins.</p>
+     <a href="problem.html"><button type="button" class="btn btn-secondary">What's the problem?</button></a>
+    </div>
+
+     <div class="right col-md-6">
+       <h1 style="margin-top:10rem;text-shadow: rgba(0,0,0,.5) 0 1px 1px;"> Solutions</h1>
+       <p style="text-align:justify;margin-left:1rem;margin-right:1rem;">LEARN! A critical component in any waste management program is public awareness and participation, in addition to appropriate legislation, strong technical support, and adequate funding. Waste is the result of human activities and everyone needs to have a proper understanding of waste management issues, without which the success of even the best conceived waste management plan becomes questionable. Being aware of this issue promotes the protection of the environment and the health of the population.</p>
+      <a href="fix.html"> <button class="btn btn-rounded btn-primary">Join The Solution</button></a>
+     </div>
+    </div>
+  </section>
+
+<section class="help pt-5 container-fuild pb-5"  id="news">
+  <div class="row">
+    <div class="col-md-12 text-center mb-2">
+      <hr style="width:40%;height:0.1rem;background-color:#01cbe1;">
+      <h1 class="h1tag2">THE LATEST <b>NEWS</b></h1>
+    </div>
+  </div>
+  <div class="row text-center" style="margin-left:18rem;margin-right:4rem;">
+    <div class="newsbackground1 col-md-3 text-left mr-2">
+          <h2 style="margin-top:1rem;">{{props['sources'][1]}}<h2>
+          <h4 class="h3tag2 mt-5">{{props['titles'][1]}}</h4>
+          <hr style="background-color:white;height:0.1rem;">
+          <a class="newslink" href="{{props['urls'][1]}}">GO <img src="https://image.flaticon.com/icons/svg/149/149049.svg" style="height:2rem;margin-bottom:0.4rem;"></a>
+        </div>
+         
+         <div class="newsbackground2 col-md-3 text-left mr-2">
+          <h2 style="margin-top:1rem;">{{props['sources'][2]}}<h2>
+          <h4 class="h3tag2 mt-5">{{props['titles'][2]}}</h4>
+          <hr style="background-color:white;height:0.1rem;">
+          <a class="newslink" href="{{props['urls'][2]}}">GO <img src="https://image.flaticon.com/icons/svg/149/149049.svg" style="height:2rem;margin-bottom:0.4rem;"></a>
+        </div>
+         
+         <div class="newsbackground3 col-md-3 text-left mr-2">
+          <h2 style="margin-top:1rem;">{{props['sources'][3]}}<h2>
+          <h4 class="h3tag2 mt-5">{{props['titles'][3]}}</h4>
+          <hr style="background-color:white;height:0.1rem;">
+          <a class="newslink" href="{{props['urls'][3]}}">GO <img src="https://image.flaticon.com/icons/svg/149/149049.svg" style="height:2rem;margin-bottom:0.4rem;"></a>
+        </div>
+         <div class="col-md-3">
+        </div>    
+      </div>
+    </section>
+
+    <section class="team container-fuild text-center" style="height:40vh;" id="team">
+       <div class="row">
+         <div class="col-lg-12">
+           <h1>OUR TEAM</h1>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-lg-12">
+           <h3 style="color:white; font-family: 'Lato', sans-serif;">AND SPONSORS 
+           </h3>
+         </div>
+       </div>
+    </section>
+
+    <section class="team2 container-fuild text-center mt-5 mb-5 ml-5 mr-5">
+       <div class="row">
+         <div class="col-md-4 pt-2">
+             <h3 style="color:#003755;">Phincho Sherpa</h3>
+            <img src="/static/img/phincho.png" style="height:17rem;border-radius:10px;width:17rem;">
+            <!-- <h3 style="color:#003755;">CEO</h3> -->
+            <hr>
+           <p  class="" style="color:#003755;font-size:1.2rem;">Phincho Sherpa worked on the front-end and design of the overall website.
+            </p>
+           <img src="/static/img/linkedin.svg" style="height:2rem;">
+           <img src="/static/img/facebook1.svg" style="height:2rem;">
+        
+          </div>
+
+          <div class="col-md-4 pt-2">
+             <h3 style="color:#003755;">Kamille Tipan </h3>
+            <img src="/static/img/kamille.jpeg" style="height:17rem;border-radius:10px;width:17rem;">
+            <!-- <h3 style="color:#003755;">Managing Director</h3> -->
+            <hr>
+            <p class="" style="color:#003755;font-size:1.2rem;">Kamille Tipan integrated the API and website's backend.</p>
+             <img src="/static/img/linkedin.svg" style="height:2rem;">
+           <img src="/static/img/facebook1.svg" style="height:2rem;">
+          </div>
+
+          <div class="col-md-4 pt-2">
+             <h3 style="color:#003755;">Rofeeah Ayeni</h3>
+            <img src="/static/img/rofeeah.jpg" style="height:17rem;border-radius:10px;width:17rem;">
+            <!-- <h3 style="color:#003755;"> Director of Operations</h3> -->
+            <hr>
+            <p  class="" style="color:#003755;font-size:1.2rem;"> Rofeeah collected data and research on the topic discussed.
+            </p>
+            <img src="/static/img/linkedin.svg" style="height:2rem;">
+           <img src="/static/img/facebook1.svg" style="height:2rem;">
+          </div>
+
+      
+
+         
+       </div>
+    </section>
+   
+   <section class="Sponsor container mb-5" style=" font-family: 'Lato', sans-serif;">
+     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner pl-5 pr-5">
+    <div class="carousel-item active text-center">
+         <h1>CISCO</h1>
+         <p>This partnership allows our viewers and supporters the place where they can both donate towards the cause and be able to view news reports regarding issues on waste management.</p>
+    </div>
+    <div class="carousel-item text-center">
+          <h1>JOHNSON&JOHNSON</h1>
+         <p>This partnership allows our viewers and supporters a place where they can both donate towards the cause and be able to view news reports regarding issues on waste management.</p>
+    </div>
+    <div class="carousel-item text-center">
+       <h1> BALSAMIQ</h1>
+         <p>This partnership deals with the combination of both organizations’ use of research to help solve problems and try to reduce the issues regarding waste management.</p>
+    </div>
+     <div class="carousel-item text-center">
+       <h1>CLOUDSPLOIT</h1>
+         <p>This partnership encourages our supporters to reduce their carbon emission through eliminating the use of fossil fuels.</p>
+     <div class="carousel-item text-center">
+       <h1>BUGSEE</h1>
+         <p>This partnership allows our viewers and supporters to properly dispose of waste, reducing waste.</p>
+    </div>
+  </div>
+  <a class="carousel-control-prev mt-5" href="#carouselExampleControls" role="button" data-slide="prev">
+    <img src="/static/img/back.svg"
+    class="carousel-control-prev-icon" aria-hidden="true" style="height:10rem;width:3rem;">
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next mt-5" href="#carouselExampleControls" role="button" data-slide="next">
+    <img src="/static/img/next.svg"
+     class="carousel-control-next-icon" aria-hidden="true" style="height:10rem;width:3rem;">
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+   </section>
+<footer style="background-color:#04927af5;padding-bottom:2rem;">
+  <div class="foot container">
+    <div class="row">
+      <div class="col-md-6">
+        <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+        <h3>FOLLOW US</h3>
+        <img src="/static/img/twitter.svg" style="height:2rem;">
+        <img src="/static/img/facebook.svg" style="height:2rem;">
+        <img src="/static/img/vimeo.svg" style="height:2rem;">
+        <img src="/static/img/google-plus.svg" style="height:2.8rem;">
+      </div>
+      <div class="col-md-6" style="margin-top:1.8rem;">
+        <h5>Join other informed donors and get updates on new features, news, and volunteering opportunities.</h5>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Your email address">
+          <div class="input-group-append">
+            <button type="submit" class="btn2 btn-primary" id="myBtn" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
+            
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle" style="color:#024469;font-size: 1.2rem; font-family: 'Lato', sans-serif;float:left;">Thank You For Joining Waste Erased</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="color:#024469;font-family: 'Lato', sans-serif;float:left">You will now be added to our mailing list. </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+
+    <div class="row" style="margin-top:5rem;">
+      <div class="col-md-3">
+        <h4>CONTACT<h4>
+              <h5 class="mt-3">Waste Erased<br>
+              Po Box 1000<br>
+              New York, New York.<br> United States<br></h5>
+              <h5>questions@wasteerased.com<br> 
+              (987) 102-0945</h5>
+        
+      </div>
+      <div class="col-md-3">
+        <h4>HELP<h4>
+            <a href="#">
+              <h5 class="mt-3">Donate</h5>
+            </a>
+            <a href="fix.html">
+              <h5 class="mt-3">Volunteer</h5>
+            </a>
+           
+      </div>
+      <div class="col-md-3">
+        <h4> AWARENESS <h4>
+            <a href="problem.html">
+              <h5 class="mt-3">Concerns</h5>
+            </a>
+            <a href="fix.html">
+              <h5 class="mt-3">Solutions</h5>
+            </a>
+            <a href="#news">
+              <h5 class="mt-3">News</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">Subscribe</h5>
+            </a>
+            <a href="#info">
+              <h5 class="mt-3">Our Mission</h5>
+            </a>
+      </div>
+      <div class="col-md-3">
+        <h4>SPONSORS<h4>
+            <a href="">
+              <h5 class="mt-3">CISCO</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">Johnson&Johnson</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">BALSAMIQ</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">CLOUDSPLOIT</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">BUGSEE</h5>
+            </a>
+      </div>
+    </div>
+  </div>
+
+
+<button class="open-button" onclick="openForm()"><img src="https://image.flaticon.com/icons/svg/892/892228.svg"style=" height:2rem;width:2rem;">Chat</button>
+
+<div class="chat-popup" id="botHelp">
+  <form method="post" action="/index.html" class="form-container">
+     <img src="https://image.flaticon.com/icons/svg/892/892228.svg"style=" height:2rem;width:2rem;"><h3>Hi! Welcome to the help desk</h3>
+
+    <label for="msg"><b>Message</b></label>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+
+    <textarea placeholder="Tell us what you need.." name="msg" required></textarea>
+
+    
+  <button onClick = "popChat()" type="submit" value="submit" class="botbtn ">Send</button>
+    <button type="button" class="botbtn cancel" onClick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+
+
+</footer>
+
+
+  <!-- donation popup content -->
+<div id="myModal2" class="modal2">
+
+  <div class="modal-content2">
+    <span class="close2">&times;</span>
+     <h3 class="h3tag3">THANK YOU, <span style="color:#01cbe1">JOHN</span> FOR YOUR DONATION</h3>
+     <hr style="margin-top:5rem;height:1rem;">
+       <h3 class="text-left">Your donation will be used to protects wild rivers, restore damaged rivers and the wildlife they support, and conserve clean water for people and nature.</h3>
+       <a href="index.html"><button type="submit" class="btn2 btn-primary" id="myBtn" style="font-size:1.5rem;">CONTINUE</button></a>
+  </div>
+
+</div>
+
+
+
+
+
+
+    <script type="text/javascript" src="{{url_for('static', filename = 'script.js')}}">
+    </script>
+
+    <script type="text/javascript">
+    let imageurls=JSON.parse('{{ props | tojson | safe}}');
+    let chatResp=JSON.parse('{{ resp | tojson | safe}}');
+        console.log(JSON.parse('{{ props | tojson | safe}}'));
+        imgs = imagess(imageurls['imagesUrls'][1],imageurls['imagesUrls'][2],imageurls['imagesUrls'][3]);
+      function popChat(){
+        if(chatResp != ""){
+        alert(chatResp);}
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

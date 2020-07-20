@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Waste Erased</title>
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+      
+<!-- The donation -->
+<div id="donation" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+   <div class="row">
+    <div class="col-md-6 mt-2 ">
+      <h1  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;margin-bottom:1rem;">DONATE</h1>
+      <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+    <form>
+      <div class="form-row">
+       <div class="col">
+        <input type="text" class="form-control" placeholder="First name">
+       </div>
+       <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+       </div>
+       </div>
+    </form>
+     <form>
+      <div class="form-row mt-2">
+       <div class="col">
+        <input type="text" class="form-control" placeholder="Email">
+       </div>
+       <div class="col">
+      <input type="text" class="form-control" placeholder="Phone Number">
+       </div>
+       </div>
+    </form>
+       <div class="form-group mt-2">
+        <label for="exampleFormControlSelect1"><b  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;">Select amount</b></label>
+         <select class="form-control" id="exampleFormControlSelect1">
+          <option>$10</option>
+          <option>$20</option>
+          <option>$50</option>
+          <option>$75</option>
+          <option>$100</option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label for="exampleFormControlTextarea1"  style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;">Message</label>
+         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+       </div>  
+       <button class="btn btn-rounded btn-primary"id="myBtn2">SUBMIT DONATION</button>
+    </div>
+     <div class="col-md-6 mt-2">
+       <h1 style="font-family: 'Lato', sans-serif;text-shadow: 1px 1px 2px #000000;"> WHY </h1>
+       <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+      <p style="font-family: 'Lato', sans-serif;font-size:1.2rem;text-shadow: 1px 1px 2px #000000;">To survive and prosper, we need an healthy environment. Rotting garbage produces harmful gases which people could breathe in. Even the vegetation around landfills does not do well when exposed to garbage. Proper waste management takes care of all of these problems and ensures that waste is not exposed to the air and water sources that can be contaminated. An incredible benefit of waste management is it can cut overall production costs in the long run. Recycling helps to conserve natural resources such as glass, plastic, paper and oil. Reusing these materials will place less strain on our natural resources and lower the cost of production. Be part of the change, the future, and lets erase waste.
+</p>
+  
+     </div>
+    </div>
+  </div>
+</div>
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <b><a class="navbar-brand" href="index.html"><img src="/static/img/logo.png"style=" height:6rem;width:5rem;">WASTE ERASED</a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Our Mission <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#news">Latest News</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Learn More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"style="background-color:#EDAA00 ;">
+          <a class="dropdown-item" href="problem.html" >Problems</a>
+          <a class="dropdown-item" href="fix.html">Solutions</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ways To Help
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#EDAA00;">
+          <a class="dropdown-item" onclick="openNav()" href="#">Donate</a>
+          <a class="dropdown-item" href="fix.html">Meetups</a>
+          <a class="dropdown-item" href="fix.html">Volunteer</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+  </form>
+</nav>
+     
+    <div class="home3 container-fuild">
+     <div class="row" id="ad">
+       <div class="col-lg-12 text-center pt-3">
+           <span class="donate1" onclick="openNav()"><h1>DONATE<img src="/static/img/make-a-donation.svg"style="height:2rem;margin-bottom:0.7rem;"></h1></span>
+       </div>
+     </div>
+     <div class="row">
+        <div class="opening col-lg-12 pl-5">
+         
+        </div>
+     </div>
+    </div>
+
+    <div class="info2 container-fuild" id="awareness">
+     <div class="row">
+        <div class="col-md-6 pt-5 pl-5 pr-5 pb-5">
+           <hr style="height:0.1rem;background-color:#01cbe1;width:50%" align="left">
+          <h3 class="h3tag">#1 WAY TO HELP</h3>
+          <p class="ptag">
+          LEARN! A critical component in any waste management program is public awareness and participation, in addition to appropriate legislation, strong technical support, and adequate funding. Waste is the result of human activities and everyone needs to have a proper understanding of waste management issues, without which the success of even the best conceived waste management plan becomes questionable.
+
+         </p>
+        </div>
+        <div class="col-md-6 text-center" style="padding-top:3rem;">
+          <img src="https://blush.ly/915ZgeFhc/p" style=" height:31rem;width:23rem;padding-bottom:2rem;">
+        </div>
+       
+     </div>
+    </div>
+    
+    
+  <div class="effects container-fuild pb-5">
+    <div class="row">
+        <div class="col-lg-6 pl-5 pt-5 pr-5 pb-5">
+          <h3 class="h3tag3">WHAT YOU CAN DO RIGHT NOW</h3>
+          <hr style="background-color:#024469;height:0.1rem;width:60%;margin-top:7rem;" align="left">
+          <p class="ptag2">
+           <b>1</b> Take reusable bags to the store when shopping.</p>
+           <br></br>
+           <p class="ptag2">
+           <b>2</b> Reduce or eliminate the use of paper plates and cups</p>
+          <br></br>
+           <p class="ptag2">
+           <b>3</b> Store leftover foods in reusable containers instead of single use plastic bags or Polystyrene foam containers.
+         </p>
+         <br></br>
+           <p class="ptag2">
+           <b>4</b> Reduce or minimize use of plastic bags and Polystyrene foam.
+
+         </p>
+         <br></br>
+           <p class="ptag2">
+           <b>5</b> Donate unwanted, slightly used clothing, furniture and other household items to local non-profit organizations.
+         </p>
+         <br></br>
+           <p class="ptag2">
+           <b>6</b> Take advantage of the many curbside and drop-off recycling opportunities.
+         </p>
+         <br></br>
+           <p class="ptag2">
+           <b>7</b> Xeriscape your yard with native plants and non-watering landscapes.
+         </p>
+         <br></br>
+           <p class="ptag2">
+           <b>8</b> Compost yard waste which also helps enrich the soil and reduces water run-off.
+         </p>
+         <br></br>
+           <p class="ptag2">
+           <b>9</b> Purchase foods in bulk or those which use less packaging.
+         </p>
+         <br></br>
+           <p class="ptag2">
+           <b>10</b> Purchase fruits and vegetables that are not pre-packaged in containers and plastics.
+         </p>
+
+        </div>
+       
+<div class="col-md-6 text-center" style="padding-top:3rem;">
+          <img src="https://blush.ly/PJNagMsoi/p" style=" height:31rem;width:23rem;padding-bottom:2rem;">
+        </div>
+
+     </div>
+    </div>
+      
+   
+    <section class="team container-fuild text-center  pb-5" id="team">
+       <div class="row">
+         <div class="col-lg-12">
+           <h1>COMMUNITY MEETUPS</h1>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-lg-12">
+           <h3 style="color:white; font-family: 'Lato', sans-serif;">NEAR YOU
+           </h3>
+        </div>
+       </div>
+           <div class="row mt-2" style="padding-left:20rem;padding-right:20rem;">
+             <div class="form-group col-md-6 ">
+               <select id="inputState" class="form-control">
+               <option selected>State</option>
+               <option>CA</option>
+                <option>CO</option>
+                 <option>FL</option>
+                  <option>NJ</option> 
+                   <option>NY</option>
+                    <option>PA</option>
+                     <option>TX</option>
+              </select>
+             </div>
+             <div class="col-md-6">
+               <div class="input-group">
+               <input type="text" class="form-control" placeholder="Zipcode">
+                <div class="input-group-append">
+                <button type="submit" class="btn2 btn-primary"  onclick="myFunction()">Submit</button>
+                </div>
+               </div>
+              </div>
+          </div>
+            
+    </section>
+    
+    
+<div id="myDIV" style="display:none;">
+  <div class="row">
+      <div class="col-md-6 pt-5 pl-5">
+         <h2 style="color: red;">Due to <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html">COVID-19</a>, we are putting an hold to meet ups. Stay tuned for our environmental Zoom workshops.</h2>
+        <img src="https://cdn.vox-cdn.com/thumbor/3KmuYB8GEJWCTiTTP-IsqH8U1Dg=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19861361/rodger_6_zoom_ringer.jpg" style="height:20rem;">
+      </div>
+      <div class="col-md-6 mt-5 mb-5">
+        <h2>DESCRIPTION</h2>
+        <p>Waste management is a serious pollution problem that affects the health of people, wildlife and local economies. We need your help to solve this problem. You can attend our weekly classes to get an idea of what you can do to help the cause.</p>
+
+        <br>
+        <h2>WHAT SHOULD YOU BRING?</h2>
+        <p>Yourself and a device to connect.</p>
+
+       <br>
+           <h2>PERSONAL INFO</h2>
+         <form class="mr-5">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+    <label for="exampleFormControlInput1">Phone Number</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="888-888-888">
+     <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">People Coming</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Comments & Concerns</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+        <a><button type="submit" class="btn2 btn-primary"  data-toggle="modal" data-target="#exampleModalCenter">Submit</button></a>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle" style="color:#024469;font-size: 1.2rem; font-family: 'Lato', sans-serif;float:left;">Thank You For Joining Us At Coney Island on 6/15/20 </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+         <div class="col-lg-12">
+          <p style="color:#024469;font-family: 'Lato', sans-serif;float:left">Please Check Your Email To Verify This Event</p>
+        </div>
+      </div>
+       <div class="row">
+         <div class="col-lg-12">
+          <p style="color:#024469;font-family: 'Lato', sans-serif;float:left">Name: John Doe</p>
+        </div>
+      </div>
+       <div class="row">
+         <div class="col-lg-12">
+          <p style="color:#024469;font-family: 'Lato', sans-serif;float:left">Phone Number: 111-111-1111</p>
+        </div>
+      </div>
+       <div class="row">
+         <div class="col-lg-12">
+          <p style="color:#024469;font-family: 'Lato', sans-serif;float:left">Email: email.com</p>
+        </div>
+      </div>
+       <div class="row">
+         <div class="col-lg-12">
+          <p style="color:#024469;font-family: 'Lato', sans-serif;float:left">People Coming: 1</p>
+        </div>
+      </div>
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+</div>
+   
+
+
+<footer style="background-color:#04927af5;padding-bottom:2rem;">
+  <div class="foot container">
+    <div class="row">
+      <div class="col-md-6">
+        <hr style="background-color:white;height:0.1rem;width:40%;" align="left">
+        <h3>FOLLOW US</h3>
+        <img src="/static/img/twitter.svg" style="height:2rem;">
+        <img src="/static/img/facebook.svg" style="height:2rem;">
+        <img src="/static/img/vimeo.svg" style="height:2rem;">
+        <img src="/static/img/google-plus.svg" style="height:2.8rem;">
+      </div>
+       <div class="col-md-6" style="margin-top:1.8rem;">
+        <h3>KEEP UP WITH US</h3>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Your email address">
+          <div class="input-group-append">
+            <button type="submit" class="btn2 btn-primary" id="myBtn">Submit</button>
+          </div>
+        </div>
+      
+      </div>
+
+
+    </div>
+
+    <div class="row" style="margin-top:5rem;">
+      <div class="col-md-3">
+        <h4>CONTACT<h4>
+              <h5 class="mt-3">Waste Erased<br>
+              Po Box 1000<br>
+              New York, New York.<br> United States<br></h5>
+              <h5>questions@wasteerased.com<br> 
+              (987) 102-0945</h5>
+        
+      </div>
+      <div class="col-md-3">
+        <h4>HELP<h4>
+            <a href="#">
+              <h5 class="mt-3">Donate</h5>
+            </a>
+            <a href="fix.html">
+              <h5 class="mt-3">Volunteer</h5>
+            </a>
+           
+      </div>
+      <div class="col-md-3">
+        <h4> AWARENESS <h4>
+            <a href="problem.html">
+              <h5 class="mt-3">Concerns</h5>
+            </a>
+            <a href="fix.html">
+              <h5 class="mt-3">Solutions</h5>
+            </a>
+            <a href="#news">
+              <h5 class="mt-3">News</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">Subscribe</h5>
+            </a>
+            <a href="#info">
+              <h5 class="mt-3">Our Mission</h5>
+            </a>
+      </div>
+   <div class="col-md-3">
+        <h4>SPONSORS<h4>
+            <a href="">
+              <h5 class="mt-3">CISCO</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">Johnson&Johnson</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">BALSAMIQ</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">CLOUDSPLOIT</h5>
+            </a>
+            <a href="">
+              <h5 class="mt-3">BUGSEE</h5>
+            </a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  <!-- donation popup content -->
+<div id="myModal2" class="modal2">
+
+  <div class="modal-content2">
+    <span class="close2">&times;</span>
+     <h3 class="h3tag3">THANK YOU, FOR YOUR DONATION</h3>
+     <hr style="margin-top:5rem;height:1rem;">
+       <h3 class="text-left">Your donation will be used to protects wild rivers, restore damaged rivers and the wildlife they support, and conserve clean water for people and nature.</h3>
+       <a href="index.html"><button type="submit" class="btn2 btn-primary" id="myBtn" style="font-size:1.5rem;">CONTINUE</button></a>
+  </div>
+
+</div>
+
+
+
+
+
+  
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
